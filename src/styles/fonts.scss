@@ -1,0 +1,52 @@
+@use 'functions';
+@use 'screens';
+
+@mixin text-preset-1 {
+  font-family: Rubik, sans-serif;
+  font-weight: 300;
+  font-size: functions.to-rem(32px);
+  line-height: functions.to-rem(38px);
+  letter-spacing: 0;
+
+  @include screens.tablet-and-up {
+    font-size: functions.to-rem(56px);
+    line-height: functions.to-rem(66px);
+  }
+}
+
+@mixin text-preset-2 {
+  font-family: Rubik, sans-serif;
+  font-weight: 300;
+  font-size: functions.to-rem(24px);
+  line-height: functions.to-rem(28px);
+  letter-spacing: 0;
+
+  @include screens.tablet-and-up {
+    font-size: functions.to-rem(40px);
+    line-height: functions.to-rem(47px);
+  }
+}
+
+@mixin text-preset-3 {
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: functions.to-rem(18px);
+  line-height: functions.to-rem(21px);
+  letter-spacing: 0;
+}
+
+@mixin text-preset-3-bold {
+  font-family: Rubik, sans-serif;
+  font-weight: 500;
+  font-size: functions.to-rem(18px);
+  line-height: functions.to-rem(21px);
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4 {
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: functions.to-rem(15px);
+  line-height: functions.to-rem(18px);
+  letter-spacing: 0;
+}

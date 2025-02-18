@@ -1,7 +1,134 @@
+@use 'colors';
+@use 'functions';
+@use 'fonts';
+@use 'screens';
+
+$radius-15px: functions.to-rem(15px);
+$radius-20px: functions.to-rem(20px);
+
+
+$space-8px: functions.to-rem(8px);
+$space-16px: functions.to-rem(16px);
+$space-24px: functions.to-rem(24px);
+$space-28px: functions.to-rem(28px);
+$space-38px: functions.to-rem(38px);
+$space-48px: functions.to-rem(48px);
+$space-80px: functions.to-rem(80px);
+$space-160px: functions.to-rem(155px);
+$space-240px: functions.to-rem(220px);
+
+$background-icon-height: functions.to-rem(80px);
+$ellipses-width: functions.to-rem(21px);
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
-.attribution a{
-  color: hsl(228, 45%, 44%);
+
+.attribution a {
+  color: colors.$attribution;
 }
+
+#app {
+  background-color: colors.$very-dark-blue;
+  padding: $space-80px $space-24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: $space-24px;
+}
+
+body {
+  margin: 0;
+}
+
+//InfoCard Start
+
+.infoCard {
+  border-radius: $radius-15px $radius-15px $radius-20px $radius-20px;
+  background-color: colors.$light-red-stud;
+  height: $space-160px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+
+  @include screens.tablet-and-up {
+    height: $space-240px;
+  }
+}
+
+.infoCardFront {
+  border-radius: $radius-15px;
+  background-color: colors.$dark-blue;
+  padding: $space-24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: $space-8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @include screens.tablet-and-up {
+    row-gap: $space-16px;
+  }
+}
+
+.infoCardFrontHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.infoCardFrontHeaderTitle {
+  flex-grow: 1;
+  color: colors.$white;
+
+  @include fonts.text-preset-3-bold;
+}
+
+.infoCardFrontHeaderIcon {
+  height: auto;
+  width: $ellipses-width;
+}
+
+.infoCardFrontValues {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+
+  @include screens.tablet-and-up {
+    flex-direction: column;
+    row-gap: $space-8px;
+  }
+}
+
+.infoCardFrontValuesCurrent {
+  flex-grow: 1;
+  color: colors.$white;
+
+  @include fonts.text-preset-1;
+}
+
+.infoCardFrontValuesLast {
+  display: flex;
+  text-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: colors.$pale-blue;
+
+  @include fonts.text-preset-4;
+}
+
+.infoCardIcon {
+  height: $background-icon-height;
+  width: auto;
+  transform: translateY(-$space-8px);
+}
+
+.infoCardIconWrapper {
+  overflow: hidden;
+}
+
+//InfoCard End
