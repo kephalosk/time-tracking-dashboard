@@ -34,8 +34,8 @@
   transition: color 0.4s ease-out;
   font-family: Rubik, sans-serif;
   font-weight: 400;
-  font-size: clamp(1.125rem, 0.9rem + 1vw, 2.25rem);
-  line-height: clamp(1.3125rem, 1.05rem + 1vw, 2.625rem);
+  font-size: clamp(0.875rem, 0.7rem + 0.7vw, 1.75rem);
+  line-height: clamp(1.0625rem, 0.85rem + 0.7vw, 2.125rem);
   letter-spacing: 0;
 }
 .profileCardBottomTime:hover {
@@ -82,8 +82,8 @@
   color: hsl(236, 100%, 87%);
   font-family: Rubik, sans-serif;
   font-weight: 400;
-  font-size: clamp(0.9375rem, 0.75rem + 1vw, 1.875rem);
-  line-height: clamp(1.125rem, 0.9rem + 1vw, 2.25rem);
+  font-size: clamp(0.6875rem, 0.55rem + 0.7vw, 1.375rem);
+  line-height: clamp(0.875rem, 0.7rem + 0.7vw, 1.75rem);
   letter-spacing: 0;
 }
 
@@ -91,14 +91,14 @@
   color: hsl(0, 100%, 100%);
   font-family: Rubik, sans-serif;
   font-weight: 300;
-  font-size: clamp(1.5rem, 1.2rem + 1vw, 3rem);
-  line-height: clamp(1.75rem, 1.4rem + 1vw, 3.5rem);
+  font-size: clamp(1.25rem, 1rem + 0.7vw, 2.5rem);
+  line-height: clamp(1.5rem, 1.2rem + 0.7vw, 3rem);
   letter-spacing: 0;
 }
 @media (min-width: 600px) {
   .profileCardTopInfoName {
-    font-size: clamp(2.5rem, 2rem + 1vw, 5rem);
-    line-height: clamp(2.9375rem, 2.35rem + 1vw, 5.875rem);
+    font-size: clamp(2.25rem, 1.8rem + 0.7vw, 4.5rem);
+    line-height: clamp(2.6875rem, 2.15rem + 0.7vw, 5.375rem);
   }
 }
 
