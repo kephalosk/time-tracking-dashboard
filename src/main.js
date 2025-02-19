@@ -1,8 +1,8 @@
-import {InfoCardEnum} from "./components/InfoCard/InfoCard";
+import {InfoCardEnum} from "./components/InfoCard/InfoCard.js";
 
 let infoCard, profileCard;
 
-initializeApp().then();
+await initializeApp();
 
 async function initializeApp() {
     await fetchData();
@@ -40,7 +40,7 @@ async function fetchProfileCard() {
 function renderData() {
     const app = document.getElementById('app');
     console.log(infoCard);
-    app.innerHTML += infoCard;
+    app.innerHTML += profileCard;
 }
 
 function addEventListener() {

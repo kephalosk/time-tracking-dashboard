@@ -5,6 +5,7 @@
 @use '../../styles/spaces';
 
 $info-card-min-width: functions.to-rem(300px);
+$info-card-min-width-tablet-and-up: functions.to-rem(250px);
 $info-card-min-height: functions.to-rem(160px);
 $info-card-min-height-tablet-and-up: functions.to-rem(240px);
 $background-icon-height: functions.to-rem(80px);
@@ -23,6 +24,7 @@ $ellipses-width: functions.to-rem(21px);
 
   @include screens.tablet-and-up {
     min-height: $info-card-min-height-tablet-and-up;
+    min-width: $info-card-min-width-tablet-and-up;
   }
 
   &--lightOrange {
@@ -61,9 +63,14 @@ $ellipses-width: functions.to-rem(21px);
   bottom: 0;
   left: 0;
   right: 0;
+  cursor: pointer;
 
   @include screens.tablet-and-up {
     row-gap: spaces.$space-16px;
+  }
+
+  &:hover {
+    background-color: colors.$desaturated-blue;
   }
 }
 
