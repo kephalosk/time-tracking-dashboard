@@ -1,0 +1,92 @@
+@use '../../styles/colors';
+@use '../../styles/fonts';
+@use '../../styles/functions';
+@use '../../styles/screens';
+@use '../../styles/spaces';
+
+$profile-card-min-width: functions.to-rem(300px);
+$profile-card-min-width-tablet-and-up: functions.to-rem(250px);
+$profile-card-icon-size: functions.to-rem(64px);
+
+.profileCard {
+  border-radius: spaces.$radius-15px;
+  background-color: colors.$dark-blue;
+  min-width: $profile-card-min-width;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr fit-content(100%);
+  align-items: flex-end;
+
+  @include screens.tablet-and-up {
+    min-width: $profile-card-min-width-tablet-and-up;
+  }
+}
+
+.profileCardBottom {
+  padding: spaces.$space-24px spaces.$space-32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  @include  screens.tablet-and-up {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    row-gap: spaces.$space-32px;
+  }
+}
+
+.profileCardBottomTime {
+  color: colors.$desaturated-blue;
+  cursor: pointer;
+
+  @include fonts.text-preset-3;
+
+  &:hover {
+    color: colors.$white;
+  }
+}
+
+.profileCardTop {
+  border-radius: spaces.$radius-15px;
+  background-color: colors.$blue;
+  padding: spaces.$space-28px;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: spaces.$space-16px;
+
+  @include screens.tablet-and-up {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: spaces.$space-24px;
+  }
+}
+
+.profileCardTopIcon {
+  border-radius: 100%;
+  border: 3px solid colors.$white;
+  height: $profile-card-icon-size;
+  width: $profile-card-icon-size;
+}
+
+.profileCardTopInfo {
+  display: flex;
+  flex-direction: column;
+  row-gap: spaces.$space-4px;
+}
+
+.profileCardTopInfoLabel {
+  color: colors.$pale-blue;
+
+  @include fonts.text-preset-4;
+}
+
+.profileCardTopInfoName {
+  color: colors.$white;
+
+  @include fonts.text-preset-2;
+}
