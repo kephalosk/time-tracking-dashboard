@@ -66,6 +66,8 @@ Active
 
 - Semantic HTML5 markup
 - SCSS custom properties
+- plain JavaScript
+- Flexbox
 - CSS Grid
 - Mobile-first workflow
 
