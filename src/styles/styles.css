@@ -4,26 +4,57 @@
 }
 
 body {
+  background-color: hsl(226, 43%, 10%);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .app {
-  background-color: hsl(226, 43%, 10%);
   padding: 5rem 1.5rem;
   height: 100%;
+  max-width: 71.25rem;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   row-gap: 1.5rem;
 }
+@media (min-width: 600px) {
+  .app {
+    display: grid;
+    grid-template-columns: 15.9375rem 1fr;
+    column-gap: 1.5rem;
+  }
+}
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: hsl(0, 100%, 100%);
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 60%);
+}
+
+.infoCardContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+@media (min-width: 600px) {
+  .infoCardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+    gap: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,9 @@
 @use 'colors';
+@use 'functions';
+@use 'screens';
 @use 'spaces';
+
+$app-max-width: functions.to-rem(1140px);
 
 * {
   margin: 0;
@@ -7,24 +11,53 @@
 }
 
 body {
+  background-color: colors.$very-dark-blue;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .app {
-  background-color: colors.$very-dark-blue;
   padding: spaces.$space-80px spaces.$space-24px;
   height: 100%;
+  max-width: $app-max-width;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   row-gap: spaces.$space-24px;
+
+  @include screens.tablet-and-up {
+    display: grid;
+    grid-template-columns: functions.to-rem(255px) 1fr;
+    column-gap: spaces.$space-24px;
+  }
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: colors.$white;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
 }
 
 .attribution a {
   color: colors.$attribution;
+}
+
+.infoCardContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: spaces.$space-24px;
+
+  @include screens.tablet-and-up {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(functions.to-rem(250px), 1fr));
+    gap: spaces.$space-24px;
+  }
 }

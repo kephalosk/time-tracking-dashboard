@@ -1,5 +1,5 @@
 import {fetchData, fetchInfoCard, fetchProfileCard} from "./globals/fetch.js";
-import {renderInfoCard, renderProfileCard} from "./globals/render.js";
+import {renderInfoCard, renderInfoCardContainer, renderProfileCard} from "./globals/render.js";
 import {shiftToNewValues} from "./globals/update.js";
 import {TimeValues} from "./constants/TimeValues.js";
 
@@ -22,6 +22,8 @@ export async function fetchComponents() {
 
 function renderData() {
     renderProfileCard(profileCard);
+
+    renderInfoCardContainer();
 
     fetchedData.forEach(topic => {
         renderInfoCard(infoCard, topic);

@@ -14,7 +14,7 @@ $profile-card-icon-size: functions.to-rem(64px);
   min-width: $profile-card-min-width;
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr fit-content(100%);
+  grid-template-rows: fit-content(100%) fit-content(100%);
   align-items: flex-end;
 
   @include screens.tablet-and-up {

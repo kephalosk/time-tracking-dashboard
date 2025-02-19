@@ -4,7 +4,7 @@
   min-width: 18.75rem;
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr fit-content(100%);
+  grid-template-rows: fit-content(100%) fit-content(100%);
   align-items: flex-end;
 }
 @media (min-width: 600px) {
@@ -34,8 +34,8 @@
   transition: color 0.4s ease-out;
   font-family: Rubik, sans-serif;
   font-weight: 400;
-  font-size: clamp(1.125rem, 0.675rem + 0.6vw, 2.25rem);
-  line-height: clamp(1.3125rem, 0.7875rem + 0.6vw, 2.625rem);
+  font-size: clamp(1.125rem, 0.9rem + 1vw, 2.25rem);
+  line-height: clamp(1.3125rem, 1.05rem + 1vw, 2.625rem);
   letter-spacing: 0;
 }
 .profileCardBottomTime:hover {
@@ -82,8 +82,8 @@
   color: hsl(236, 100%, 87%);
   font-family: Rubik, sans-serif;
   font-weight: 400;
-  font-size: clamp(0.9375rem, 0.5625rem + 0.6vw, 1.875rem);
-  line-height: clamp(1.125rem, 0.675rem + 0.6vw, 2.25rem);
+  font-size: clamp(0.9375rem, 0.75rem + 1vw, 1.875rem);
+  line-height: clamp(1.125rem, 0.9rem + 1vw, 2.25rem);
   letter-spacing: 0;
 }
 
@@ -91,14 +91,14 @@
   color: hsl(0, 100%, 100%);
   font-family: Rubik, sans-serif;
   font-weight: 300;
-  font-size: clamp(1.5rem, 0.9rem + 0.6vw, 3rem);
-  line-height: clamp(1.75rem, 1.05rem + 0.6vw, 3.5rem);
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 3rem);
+  line-height: clamp(1.75rem, 1.4rem + 1vw, 3.5rem);
   letter-spacing: 0;
 }
 @media (min-width: 600px) {
   .profileCardTopInfoName {
-    font-size: clamp(2.5rem, 1.5rem + 0.6vw, 5rem);
-    line-height: clamp(2.9375rem, 1.7625rem + 0.6vw, 5.875rem);
+    font-size: clamp(2.5rem, 2rem + 1vw, 5rem);
+    line-height: clamp(2.9375rem, 2.35rem + 1vw, 5.875rem);
   }
 }
 

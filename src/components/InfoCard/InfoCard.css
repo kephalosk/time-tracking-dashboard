@@ -72,8 +72,8 @@
   color: hsl(0, 100%, 100%);
   font-family: Rubik, sans-serif;
   font-weight: 500;
-  font-size: clamp(1.125rem, 0.675rem + 0.6vw, 2.25rem);
-  line-height: clamp(1.3125rem, 0.7875rem + 0.6vw, 2.625rem);
+  font-size: clamp(1.125rem, 0.9rem + 1vw, 2.25rem);
+  line-height: clamp(1.3125rem, 1.05rem + 1vw, 2.625rem);
   letter-spacing: 0;
 }
 
@@ -104,14 +104,14 @@
   color: hsl(0, 100%, 100%);
   font-family: Rubik, sans-serif;
   font-weight: 300;
-  font-size: clamp(2rem, 1.2rem + 0.6vw, 4rem);
-  line-height: clamp(2.375rem, 1.425rem + 0.6vw, 4.75rem);
+  font-size: clamp(2rem, 1.6rem + 1vw, 4rem);
+  line-height: clamp(2.375rem, 1.9rem + 1vw, 4.75rem);
   letter-spacing: 0;
 }
 @media (min-width: 600px) {
   .infoCardFrontValuesCurrent {
-    font-size: clamp(3.5rem, 2.1rem + 0.6vw, 7rem);
-    line-height: clamp(4.125rem, 2.475rem + 0.6vw, 8.25rem);
+    font-size: clamp(3.5rem, 2.8rem + 1vw, 7rem);
+    line-height: clamp(4.125rem, 3.3rem + 1vw, 8.25rem);
   }
 }
 
@@ -122,8 +122,8 @@
   color: hsl(236, 100%, 87%);
   font-family: Rubik, sans-serif;
   font-weight: 400;
-  font-size: clamp(0.9375rem, 0.5625rem + 0.6vw, 1.875rem);
-  line-height: clamp(1.125rem, 0.675rem + 0.6vw, 2.25rem);
+  font-size: clamp(0.9375rem, 0.75rem + 1vw, 1.875rem);
+  line-height: clamp(1.125rem, 0.9rem + 1vw, 2.25rem);
   letter-spacing: 0;
 }
 
