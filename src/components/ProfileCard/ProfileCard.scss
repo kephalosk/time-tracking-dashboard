@@ -39,10 +39,15 @@ $profile-card-icon-size: functions.to-rem(64px);
 .profileCardBottomTime {
   color: colors.$desaturated-blue;
   cursor: pointer;
+  transition: color 0.4s ease-out;
 
   @include fonts.text-preset-3;
 
   &:hover {
+    color: colors.$white;
+  }
+
+  &--active {
     color: colors.$white;
   }
 }

@@ -64,6 +64,7 @@ $ellipses-width: functions.to-rem(21px);
   left: 0;
   right: 0;
   cursor: pointer;
+  transition: background-color 0.4s ease-out;
 
   @include screens.tablet-and-up {
     row-gap: spaces.$space-16px;
@@ -72,6 +73,9 @@ $ellipses-width: functions.to-rem(21px);
   &:hover {
     background-color: colors.$desaturated-blue;
   }
+}
+.infoCardFront * {
+  cursor: inherit;
 }
 
 .infoCardFrontHeader {

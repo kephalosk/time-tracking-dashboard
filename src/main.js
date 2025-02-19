@@ -1,47 +1,43 @@
-import {InfoCardEnum} from "./components/InfoCard/InfoCard.js";
+import {fetchData, fetchInfoCard, fetchProfileCard} from "./globals/fetch.js";
+import {renderInfoCard, renderProfileCard} from "./globals/render.js";
+import {shiftToNewValues} from "./globals/update.js";
+import {TimeValues} from "./constants/TimeValues.js";
 
+let fetchedData;
 let infoCard, profileCard;
 
 await initializeApp();
 
 async function initializeApp() {
-    await fetchData();
+    fetchedData = await fetchData();
     await fetchComponents();
     renderData();
-    addEventListener();
+    addEventListeners();
 }
 
-async function fetchData() {
-}
-
-async function fetchComponents() {
-    await fetchInfoCard();
-    await fetchProfileCard();
-}
-
-async function fetchInfoCard() {
-    await fetch('./src/components/InfoCard/InfoCard.html')
-        .then(response => response.text())
-        .then(data => {
-            infoCard = data;
-        })
-        .catch(error => console.error('Error while fetching InfoCard component:', error));
-}
-
-async function fetchProfileCard() {
-    await fetch('./src/components/ProfileCard/ProfileCard.html')
-        .then(response => response.text())
-        .then(data => {
-            profileCard = data;
-        })
-        .catch(error => console.error('Error while fetching ProfileCard component:', error));
+export async function fetchComponents() {
+    infoCard = await fetchInfoCard();
+    profileCard = await fetchProfileCard();
 }
 
 function renderData() {
-    const app = document.getElementById('app');
-    console.log(infoCard);
-    app.innerHTML += profileCard;
+    renderProfileCard(profileCard);
+
+    fetchedData.forEach(topic => {
+        renderInfoCard(infoCard, topic);
+    });
 }
 
-function addEventListener() {
+function addEventListeners() {
+    TimeValues.forEach(timeValue => {
+        addTimeEventListener(timeValue.timeSelector, timeValue.timeEnum);
+    });
+}
+
+function addTimeEventListener(timeSelector, timeEnum) {
+    const time = document.querySelector(`.${timeSelector}`);
+
+    time.addEventListener('click', () => {
+        shiftToNewValues(time, timeEnum, fetchedData);
+    });
 }

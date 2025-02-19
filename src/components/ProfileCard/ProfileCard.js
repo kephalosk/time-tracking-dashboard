@@ -1,5 +1,5 @@
 export const ProfileCardTimeEnum = Object.freeze({
-    ACTIVE: 'profileCardTime--active',
+    ACTIVE: 'profileCardBottomTime--active',
 });
 
 // ProfileCard Doc

@@ -46,6 +46,7 @@
   left: 0;
   right: 0;
   cursor: pointer;
+  transition: background-color 0.4s ease-out;
 }
 @media (min-width: 600px) {
   .infoCardFront {
@@ -54,6 +55,10 @@
 }
 .infoCardFront:hover {
   background-color: hsl(235, 45%, 61%);
+}
+
+.infoCardFront * {
+  cursor: inherit;
 }
 
 .infoCardFrontHeader {
@@ -67,8 +72,8 @@
   color: hsl(0, 100%, 100%);
   font-family: Rubik, sans-serif;
   font-weight: 500;
-  font-size: 1.125rem;
-  line-height: 1.3125rem;
+  font-size: clamp(1.125rem, 0.675rem + 0.6vw, 2.25rem);
+  line-height: clamp(1.3125rem, 0.7875rem + 0.6vw, 2.625rem);
   letter-spacing: 0;
 }
 
@@ -99,14 +104,14 @@
   color: hsl(0, 100%, 100%);
   font-family: Rubik, sans-serif;
   font-weight: 300;
-  font-size: 2rem;
-  line-height: 2.375rem;
+  font-size: clamp(2rem, 1.2rem + 0.6vw, 4rem);
+  line-height: clamp(2.375rem, 1.425rem + 0.6vw, 4.75rem);
   letter-spacing: 0;
 }
 @media (min-width: 600px) {
   .infoCardFrontValuesCurrent {
-    font-size: 3.5rem;
-    line-height: 4.125rem;
+    font-size: clamp(3.5rem, 2.1rem + 0.6vw, 7rem);
+    line-height: clamp(4.125rem, 2.475rem + 0.6vw, 8.25rem);
   }
 }
 
@@ -117,8 +122,8 @@
   color: hsl(236, 100%, 87%);
   font-family: Rubik, sans-serif;
   font-weight: 400;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
+  font-size: clamp(0.9375rem, 0.5625rem + 0.6vw, 1.875rem);
+  line-height: clamp(1.125rem, 0.675rem + 0.6vw, 2.25rem);
   letter-spacing: 0;
 }
 
