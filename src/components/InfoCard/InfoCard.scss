@@ -1,0 +1,129 @@
+@use '../../styles/colors';
+@use '../../styles/fonts';
+@use '../../styles/functions';
+@use '../../styles/screens';
+@use '../../styles/spaces';
+
+$info-card-min-width: functions.to-rem(300px);
+$info-card-min-height: functions.to-rem(160px);
+$info-card-min-height-tablet-and-up: functions.to-rem(240px);
+$background-icon-height: functions.to-rem(80px);
+$ellipses-width: functions.to-rem(21px);
+
+.infoCard {
+  border-radius: spaces.$radius-15px spaces.$radius-15px spaces.$radius-20px spaces.$radius-20px;
+  background-color: colors.$light-red-stud;
+  min-height: $info-card-min-height;
+  min-width: $info-card-min-width;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+
+  @include screens.tablet-and-up {
+    min-height: $info-card-min-height-tablet-and-up;
+  }
+
+  &--lightOrange {
+    background-color: colors.$light-orange-work;
+  }
+
+  &--softBlue {
+    background-color: colors.$soft-blue-play;
+  }
+
+  &--lightRed {
+    background-color: colors.$light-red-stud;
+  }
+
+  &--limeGreen {
+    background-color: colors.$lime-green-exercise;
+  }
+
+  &--violet {
+    background-color: colors.$violet-social;
+  }
+
+  &--softOrange {
+    background-color: colors.$soft-orange-self-care;
+  }
+}
+
+.infoCardFront {
+  border-radius: spaces.$radius-15px;
+  background-color: colors.$dark-blue;
+  padding: spaces.$space-24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: spaces.$space-8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @include screens.tablet-and-up {
+    row-gap: spaces.$space-16px;
+  }
+}
+
+.infoCardFrontHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.infoCardFrontHeaderTitle {
+  flex-grow: 1;
+  color: colors.$white;
+
+  @include fonts.text-preset-3-bold;
+}
+
+.infoCardFrontHeaderIcon {
+  height: auto;
+  width: $ellipses-width;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(1000%);
+  }
+}
+
+.infoCardFrontValues {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @include screens.tablet-and-up {
+    flex-direction: column;
+    row-gap: spaces.$space-8px;
+    align-items: start;
+  }
+}
+
+.infoCardFrontValuesCurrent {
+  flex-grow: 1;
+  color: colors.$white;
+
+  @include fonts.text-preset-1;
+}
+
+.infoCardFrontValuesLast {
+  display: flex;
+  text-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: colors.$pale-blue;
+
+  @include fonts.text-preset-4;
+}
+
+.infoCardIcon {
+  height: $background-icon-height;
+  width: auto;
+  transform: translateY(-(spaces.$space-8px));
+}
+
+.infoCardIconWrapper {
+  overflow: hidden;
+}

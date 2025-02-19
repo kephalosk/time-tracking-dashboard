@@ -1,0 +1,14 @@
+@use 'functions';
+
+$space-8px: functions.to-rem(8px);
+$space-16px: functions.to-rem(16px);
+$space-24px: functions.to-rem(24px);
+$space-28px: functions.to-rem(28px);
+$space-38px: functions.to-rem(38px);
+$space-48px: functions.to-rem(48px);
+$space-80px: functions.to-rem(80px);
+$space-160px: functions.to-rem(155px);
+$space-240px: functions.to-rem(220px);
+
+$radius-15px: functions.to-rem(15px);
+$radius-20px: functions.to-rem(20px);

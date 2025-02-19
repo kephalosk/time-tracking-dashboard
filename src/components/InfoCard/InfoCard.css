@@ -1,0 +1,130 @@
+.infoCard {
+  border-radius: 0.9375rem 0.9375rem 1.25rem 1.25rem;
+  background-color: hsl(348, 100%, 68%);
+  min-height: 10rem;
+  min-width: 18.75rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+}
+@media (min-width: 600px) {
+  .infoCard {
+    min-height: 15rem;
+  }
+}
+.infoCard--lightOrange {
+  background-color: hsl(15, 100%, 70%);
+}
+.infoCard--softBlue {
+  background-color: hsl(195, 74%, 62%);
+}
+.infoCard--lightRed {
+  background-color: hsl(348, 100%, 68%);
+}
+.infoCard--limeGreen {
+  background-color: hsl(145, 58%, 55%);
+}
+.infoCard--violet {
+  background-color: hsl(264, 64%, 52%);
+}
+.infoCard--softOrange {
+  background-color: hsl(43, 84%, 65%);
+}
+
+.infoCardFront {
+  border-radius: 0.9375rem;
+  background-color: hsl(235, 46%, 20%);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+@media (min-width: 600px) {
+  .infoCardFront {
+    row-gap: 1rem;
+  }
+}
+
+.infoCardFrontHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.infoCardFrontHeaderTitle {
+  flex-grow: 1;
+  color: hsl(0, 100%, 100%);
+  font-family: Rubik, sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+  letter-spacing: 0;
+}
+
+.infoCardFrontHeaderIcon {
+  height: auto;
+  width: 1.3125rem;
+  cursor: pointer;
+}
+.infoCardFrontHeaderIcon:hover {
+  filter: brightness(1000%);
+}
+
+.infoCardFrontValues {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .infoCardFrontValues {
+    flex-direction: column;
+    row-gap: 0.5rem;
+    align-items: start;
+  }
+}
+
+.infoCardFrontValuesCurrent {
+  flex-grow: 1;
+  color: hsl(0, 100%, 100%);
+  font-family: Rubik, sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 2.375rem;
+  letter-spacing: 0;
+}
+@media (min-width: 600px) {
+  .infoCardFrontValuesCurrent {
+    font-size: 3.5rem;
+    line-height: 4.125rem;
+  }
+}
+
+.infoCardFrontValuesLast {
+  display: flex;
+  text-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: hsl(236, 100%, 87%);
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  letter-spacing: 0;
+}
+
+.infoCardIcon {
+  height: 5rem;
+  width: auto;
+  transform: translateY(-0.5rem);
+}
+
+.infoCardIconWrapper {
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=InfoCard.css.map */

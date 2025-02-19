@@ -1,3 +1,5 @@
+import {InfoCardEnum} from "./components/InfoCard/InfoCard";
+
 let infoCard, profileCard;
 
 initializeApp().then();
@@ -18,7 +20,7 @@ async function fetchComponents() {
 }
 
 async function fetchInfoCard() {
-    await fetch('./src/components/InfoCard.html')
+    await fetch('./src/components/InfoCard/InfoCard.html')
         .then(response => response.text())
         .then(data => {
             infoCard = data;
@@ -27,7 +29,7 @@ async function fetchInfoCard() {
 }
 
 async function fetchProfileCard() {
-    await fetch('./src/components/ProfileCard.html')
+    await fetch('./src/components/ProfileCard/ProfileCard.html')
         .then(response => response.text())
         .then(data => {
             profileCard = data;

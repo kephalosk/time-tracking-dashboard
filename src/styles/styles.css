@@ -1,10 +1,6 @@
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
 #app {
@@ -16,113 +12,13 @@
   row-gap: 1.5rem;
 }
 
-body {
-  margin: 0;
+.attribution {
+  font-size: 11px;
+  text-align: center;
 }
 
-.infoCard {
-  border-radius: 0.9375rem 0.9375rem 1.25rem 1.25rem;
-  background-color: hsl(348, 100%, 68%);
-  height: 9.6875rem;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  position: relative;
-}
-@media (min-width: 600px) {
-  .infoCard {
-    height: 13.75rem;
-  }
-}
-
-.infoCardFront {
-  border-radius: 0.9375rem;
-  background-color: hsl(235, 46%, 20%);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.5rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-@media (min-width: 600px) {
-  .infoCardFront {
-    row-gap: 1rem;
-  }
-}
-
-.infoCardFrontHeader {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.infoCardFrontHeaderTitle {
-  flex-grow: 1;
-  color: hsl(0, 100%, 100%);
-  font-family: Rubik, sans-serif;
-  font-weight: 500;
-  font-size: 1.125rem;
-  line-height: 1.3125rem;
-  letter-spacing: 0;
-}
-
-.infoCardFrontHeaderIcon {
-  height: auto;
-  width: 1.3125rem;
-}
-
-.infoCardFrontValues {
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-}
-@media (min-width: 600px) {
-  .infoCardFrontValues {
-    flex-direction: column;
-    row-gap: 0.5rem;
-  }
-}
-
-.infoCardFrontValuesCurrent {
-  flex-grow: 1;
-  color: hsl(0, 100%, 100%);
-  font-family: Rubik, sans-serif;
-  font-weight: 300;
-  font-size: 2rem;
-  line-height: 2.375rem;
-  letter-spacing: 0;
-}
-@media (min-width: 600px) {
-  .infoCardFrontValuesCurrent {
-    font-size: 3.5rem;
-    line-height: 4.125rem;
-  }
-}
-
-.infoCardFrontValuesLast {
-  display: flex;
-  text-wrap: nowrap;
-  flex-wrap: nowrap;
-  color: hsl(236, 100%, 87%);
-  font-family: Rubik, sans-serif;
-  font-weight: 400;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  letter-spacing: 0;
-}
-
-.infoCardIcon {
-  height: 5rem;
-  width: auto;
-  transform: translateY(-0.5rem);
-}
-
-.infoCardIconWrapper {
-  overflow: hidden;
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 /*# sourceMappingURL=styles.css.map */
