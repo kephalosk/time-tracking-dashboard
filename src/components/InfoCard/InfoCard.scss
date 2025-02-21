@@ -4,7 +4,7 @@
 @use '../../styles/screens';
 @use '../../styles/spaces';
 
-$info-card-min-width: functions.to-rem(300px);
+$info-card-min-width: functions.to-rem(270px);
 $info-card-min-width-tablet-and-up: functions.to-rem(250px);
 $info-card-min-height: functions.to-rem(160px);
 $info-card-min-height-tablet-and-up: functions.to-rem(240px);

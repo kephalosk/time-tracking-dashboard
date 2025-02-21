@@ -1,7 +1,7 @@
 .profileCard {
   border-radius: 0.9375rem;
   background-color: hsl(235, 46%, 20%);
-  min-width: 18.75rem;
+  min-width: 16.875rem;
   width: 100%;
   display: grid;
   grid-template-rows: fit-content(100%) fit-content(100%);

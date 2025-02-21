@@ -4,7 +4,7 @@
 @use '../../styles/screens';
 @use '../../styles/spaces';
 
-$profile-card-min-width: functions.to-rem(300px);
+$profile-card-min-width: functions.to-rem(270px);
 $profile-card-min-width-tablet-and-up: functions.to-rem(250px);
 $profile-card-icon-size: functions.to-rem(64px);
 
